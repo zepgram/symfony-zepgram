@@ -10,7 +10,6 @@ use App\Form\ContactType;
 class IndexController extends AbstractController
 {
     /**
-     * @Route("/{_locale}/")
      * @Route("/")
      */
     public function index(Request $request)
