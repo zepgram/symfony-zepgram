@@ -1,0 +1,29 @@
+meta:
+  title: Web Développeur E-commerce Magento
+profile:
+  title: Développeur PHP spécialisé magento localisé à Paris
+  name: Benjamin Calef
+  action1: CV
+  action2: Certification
+  action3: Contact
+  cv: Curriculum vitae
+  certification: Magento2 certification
+contact:
+  title: Bonjour
+  phrase: Vous souhaitez me contacter ?
+  label:
+    email: Adresse email
+    name: Nom complet
+    message: Message
+    send: Envoyer
+    close: Fermer
+    reset: Réinitialiser
+  success: Votre message a été envoyé.
+  thanks: Merci et à bientôt !
+  error: Une erreur s'est produite, veuillez réessayer.
+skills:
+  title: Fiche technique
+  compliant: conforme
+  utilities: Utilitaires
+document:
+  title: Documents téléchargeables

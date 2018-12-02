@@ -1,0 +1,29 @@
+meta:
+  title: Magento E-commerce Web Developer
+profile:
+  title: Developer PHP specialized magento located in Paris
+  name: Benjamin Calef
+  action1: CV
+  action2: Certification
+  action3: Contact
+  cv: Curriculum vitae
+  certification: Magento2 certification
+contact:
+  title: Hello
+  phrase: Time to get in touch ?
+  label:
+    email: Email address
+    name: Full name
+    message: Message
+    send: Send
+    close: Close
+    reset: Reset
+  success: Your message has been sent.
+  thanks: Thanks and see you soon!
+  error: An error occurred, please try again.
+skills:
+  title: Technical sheet
+  compliant: compliant
+  utilities: Utilities
+document:
+  title: Downloadable documents

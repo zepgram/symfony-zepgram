@@ -1,0 +1,155 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link href="{{ asset('build/static/app.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block title %}{{ 'meta.title'|trans }} | {{ 'profile.name'|trans }}{% endblock %}
+
+{% block body %}
+    <video autoplay muted loop id="video" class="container-video">
+        <source src="{{ asset('build/static/media/videos/office-background.mp4') }}" type="video/mp4">
+    </video>
+    <header>
+        <div id="top-banner">
+            <span class="icon-lang icon">
+                <a href="/">FR</a> | <a href="/en/">EN</a>
+            </span>
+            <div class="container-icons">
+                <div class="container-font">
+                    <a target="_blank" href="https://u.magento.com/certification/directory/dev/2504796/">
+                        <i class="fab fa-magento"></i>
+                    </a>
+                </div>
+                <div class="container-font">
+                    <a target="_blank" href="https://twitter.com/InitVirtualCrea">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+                <div class="container-font">
+                    <a target="_blank" href="https://github.com/zepgram/">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+                <div class="container-font">
+                    <a target="_blank" href="https://www.linkedin.com/in/benjamin-calef/">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="icon-skills icon" data-dialog-skills="skills">
+                <i class="fas fa-cogs"></i>
+            </div>
+            <div class="icon-contact icon" data-dialog-contact="contact">
+                <i class="fas fa-envelope"></i>
+            </div>
+            <div class="icon-doc icon hide-desktop" data-dialog-document="document">
+                <i class="fas fa-file-alt"></i>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div id="profile" class="profile"></div>
+            <div id="banner">
+                <div class="content">
+                    <h1>{{ 'profile.name'|trans }}</h1>
+                    <h2>{{ 'profile.title'|trans }}</h2>
+                </div>
+            </div>
+            <nav id="nav" class="hide-mobile-inline">
+                <a target="_blank" href="{{ asset('build/static/media/docs/cv.pdf') }}">
+                    <button id="button1">{{ 'profile.action1'|trans }}</button>
+                </a>
+                <a target="_blank" href="{{ asset('build/static/media/docs/certification.pdf') }}">
+                    <button id="button2">{{ 'profile.action2'|trans }}</button>
+                </a>
+                <button id="button3">
+                    {{ 'profile.action3'|trans }}
+                </button>
+            </nav>
+        </div>
+    </header>
+    <footer>
+        <div id="contact" class="dialog">
+            <div class="dialog__overlay" id="data-dialog-contact"></div>
+            <div class="dialog__content">
+                <h2><strong>{{ 'contact.title'|trans }}</strong>,<br>{{ 'contact.phrase'|trans }}</h2>
+                <div class="content">
+                    {{ form_start(form, {'attr': {'id': 'contact-form'}}) }}
+                    {{ form_label(form.email) }}
+                    {{ form_widget(form.email) }}
+                    {{ form_label(form.name) }}
+                    {{ form_widget(form.name) }}
+                    {{ form_label(form.message) }}
+                    {{ form_widget(form.message) }}
+                    {{ form_end(form) }}
+                    <div>
+                        <button id="close" class="action" data-dialog-close>{{ 'contact.label.close'|trans }}</button>
+                    </div>
+                    <div class="response success">{{ 'contact.success'|trans }}<br>{{ 'contact.thanks'|trans }}</div>
+                    <div class="response error">{{ 'contact.error'|trans }}</div>
+                </div>
+            </div>
+        </div>
+        <div id="skills" class="dialog">
+            <div class="dialog__overlay" id="data-dialog-skills"></div>
+            <div class="dialog__content">
+                <h2><strong>{{ 'skills.title'|trans }}</strong></h2>
+                <div class="content">
+                    <ul>
+                        <li>Languages
+                            <ul>
+                                <li>php {{ 'skills.compliant'|trans }} meqp2</li>
+                                <li>javascript</li>
+                                <li>html, css, less, sass</li>
+                                <li>bootstrap, jquery, angular, knockout</li>
+                            </ul>
+                        </li>
+                        <li>Framework
+                            <ul>
+                                <li>magento 1 community</li>
+                                <li>magento 2 cloud</li>
+                                <li>symfony 4</li>
+                            </ul>
+                        </li>
+                        <li>{{ 'skills.utilities'|trans }}
+                            <ul>
+                                <li>git</li>
+                                <li>composer</li>
+                                <li>vagrant</li>
+                                <li>docker</li>
+                            </ul>
+                        </li>
+                        <li>Amazon web services
+                            <ul>
+                                <li>php sdk</li>
+                                <li>storage (s3)</li>
+                                <li>cloud watch</li>
+                                <li>elastic beanstalk</li>
+                                <li>lambda</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <button id="close" class="action" data-dialog-close>{{ 'contact.label.close'|trans }}</button>
+                </div>
+            </div>
+        </div>
+        <div id="document" class="dialog">
+            <div class="dialog__overlay" id="data-dialog-document"></div>
+            <div class="dialog__content">
+                <h2><strong>{{ 'document.title'|trans }}</strong></h2>
+                <div class="content">
+                    <a target="_blank" href="{{ asset('build/static/media/docs/cv.pdf') }}">
+                        {{ 'profile.cv'|trans }}
+                    </a>
+                    <a target="_blank" href="{{ asset('build/static/media/docs/certification.pdf') }}">
+                        {{ 'profile.certification'|trans }}
+                    </a>
+                    <button id="close" class="action" data-dialog-close>{{ 'contact.label.close'|trans }}</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+    {% block javascripts %}
+        {{ encore_entry_script_tags('static/app') }}
+    {% endblock %}
+{% endblock %}

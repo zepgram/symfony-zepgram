@@ -1,0 +1,529 @@
+@import "~bootstrap/scss/bootstrap-reboot"
+@import "~bootstrap-material-design/scss/bootstrap-material-design"
+
+$primary-color: #212121
+$secondary-color: #ffffff
+$contrast-primary-color: #313131
+$contrast-secondary-color: #ced4da
+$contrast-third-color: #f1f1f1
+$link: #0e77d8
+$color1: #007BFF
+$color2: #A06CFF
+$color3: #DC3545
+$color4: #FD7E14
+$color5: #FFC107
+$color6: #28A745
+$color7: #20C997
+$color8: #17A2B8
+$success: #28A745
+$error: #DC3545
+$background: rgba(34, 34, 34, 0.95)
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus
+  -webkit-text-fill-color: $primary-color
+  -webkit-box-shadow: 0 0 0 1000px $secondary-color inset !important
+  transition: background-color 5000s ease-in-out 0s
+  border-bottom: 1px solid $contrast-secondary-color !important
+h1, h2, h3, h4, h5, h6
+  margin-bottom: 0.5rem
+  font-weight: 300
+  line-height: 1.2
+a
+  color: inherit
+  &:hover
+    color: inherit
+    text-decoration: none
+input
+  margin-bottom: 1rem
+body
+  color: $secondary-color
+  overflow: hidden
+header
+  text-align: center
+.hide-desktop
+  display: none
+.hide-desktop-inline
+  display: none
+.hide-mobile
+  display: block
+.hide-mobile-inline
+  display: inline-block
+.svg-inline--fa
+  color: $secondary-color
+  -webkit-transition: all 0.3s
+  transition: all 0.3s
+.color1
+  color: $color1
+.color2
+  color: $color2
+.color3
+  color: $color3
+.color4
+  color: $color4
+.color5
+  color: $color5
+.color6
+  color: $color6
+.color7
+  color: $color7
+.color8
+  color: $color8
+.color1-icon a svg:hover
+  color: $color1
+.color2-icon a svg:hover
+  color: $color2
+.color3-icon a svg:hover
+  color: $color3
+.color4-icon a svg:hover
+  color: $color4
+.color5-icon a svg:hover
+  color: $color5
+.color6-icon a svg:hover
+  color: $color6
+.color7-icon a svg:hover
+  color: $color7
+.color8-icon a svg:hover
+  color: $color8
+.color1-button::before
+  background: transparentize($color1, 0.2)
+.color2-button::before
+  background: transparentize($color2, 0.2)
+.color3-button::before
+  background: transparentize($color3, 0.2)
+.color4-button::before
+  background: transparentize($color4, 0.2)
+.color5-button::before
+  background: transparentize($color5, 0.2)
+.color6-button::before
+  background: transparentize($color6, 0.2)
+.color7-button::before
+  background: transparentize($color7, 0.2)
+.color8-button::before
+  background: transparentize($color8, 0.2)
+.container-video
+  object-fit: cover
+  width: 100%
+  height: 100%
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+#top-banner
+  position: absolute
+  background: $primary-color
+  width: 100%
+  z-index: 2
+  left: 0
+  top: 0
+  height: auto
+  padding: 0 30px
+  -webkit-transition: all 2s
+  transition: all 2s
+  .icon
+    margin: 13px 0
+  .icon-lang
+    font-size: 0.95em
+    margin-top: 15px
+    float: left
+    a
+      margin: 0 3px
+  .icon-skills,
+  .icon-contact,
+  .icon-doc
+    font-size: 1.2em
+    cursor: pointer
+    float: right
+  .icon-contact
+    margin-right: 25px
+  .icon-doc
+    margin-right: 30px
+  .container-icons
+    text-align: center
+    display: inline-block
+    position: absolute
+    margin: 0 auto
+    width: 35%
+    left: 0
+    right: 0
+    top: 2.5px
+  .container-font
+    font-size: 1.5em
+    width: 23%
+    display: inline-block
+    line-height: 0
+    margin: 11.7px 0
+.wrapper
+  position: absolute
+  z-index: 1
+  margin: 0 auto
+  text-align: center
+  top: 18%
+  left: 0
+  right: 0
+  width: 100%
+  #profile
+    background: url(../static/images/benjamin_calef.jpg) no-repeat
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    -o-background-size: cover
+    background-size: cover
+    border-radius: 100%
+    border: 2px solid
+    position: relative
+    width: 175px
+    height: 175px
+    margin: 0 auto
+    top: 72px
+    z-index: 1
+    cursor: pointer
+    -webkit-transition: all 2s
+    transition: all 2s
+  #banner
+    width: 565.39px
+    padding: 30px 0
+    margin: 0 auto
+    padding-top: 90px
+    position: relative
+    background: $background
+    border-top: 1px solid
+    -webkit-transition: all 2s
+    transition: all 2s
+    .content
+      margin: 0 auto
+      max-width: 320px
+      color: $secondary-color
+      h1
+        font-size: 1.6em
+        text-transform: uppercase
+      h2
+        font-size: 1.2em
+        margin: 0 auto
+nav
+  display: inline-block
+footer
+  width: 100%
+  margin-top: 30px
+  position: fixed
+  bottom: 0
+  z-index: 10
+  #container-footer
+    height: 600px
+.content
+  > ul
+    list-style: none
+#skills.dialog
+  .content
+    text-align: left
+/* button
+button
+  background: $primary-color
+  color: $secondary-color
+  text-transform: uppercase
+  font-size: 0.95em
+  cursor: pointer
+  float: left
+  min-width: 150px
+  max-width: 250px
+  display: block
+  margin: 1em
+  padding: 14px 45px
+  vertical-align: middle
+  position: relative
+  z-index: 1
+  border: none
+  -webkit-backface-visibility: hidden
+  -moz-osx-font-smoothing: grayscale
+  -webkit-transition: all 0.5s
+  transition: all 0.5s
+  &#button1
+    margin-left: 0
+  &#button3
+    margin-right: 0
+button:focus
+  outline: none
+button > span
+  vertical-align: middle
+button::before
+  content: ''
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  z-index: -1
+  opacity: 0
+  -webkit-transform: scale3d(0.7, 1, 1)
+  transform: scale3d(0.7, 1, 1)
+  -webkit-transition: -webkit-transform 0.5s, opacity 0.5s, background 0.5s
+  transition: transform 0.5s, opacity 0.5s, background 0.5s
+button,
+button::before
+  -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1)
+  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1)
+button:hover::before
+  opacity: 1
+  -webkit-transform: translate3d(0, 0, 0)
+  transform: translate3d(0, 0, 0)
+
+/* dialog
+.dialog,
+.dialog__overlay
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+.dialog
+  position: fixed
+  display: -webkit-flex
+  display: flex
+  -webkit-align-items: center
+  align-items: center
+  -webkit-justify-content: center
+  justify-content: center
+  pointer-events: none
+.dialog__overlay
+  position: absolute
+  z-index: 1
+  background: rgba(0, 0, 0, 0.85)
+  opacity: 0
+  -webkit-transition: opacity 0.3s
+  transition: opacity 0.3s
+  -webkit-backface-visibility: hidden
+.dialog--open .dialog__overlay
+  opacity: 1
+  pointer-events: auto
+.dialog__content
+  width: 55%
+  max-width: 560px
+  min-width: 290px
+  background: $secondary-color
+  color: $contrast-primary-color
+  padding: 3em
+  text-align: center
+  position: absolute
+  z-index: 5
+  opacity: 0
+  button
+    margin-top: 2.5rem
+.dialog--open .dialog__content
+  pointer-events: auto
+.dialog h2
+  font-weight: 400
+  font-size: 1.7em
+  padding: 0 0 2em
+  margin: 0
+.dialog--open .dialog__overlay
+  -webkit-transition-duration: 0.8s
+  transition-duration: 0.8s
+.dialog--close .dialog__overlay
+  -webkit-transition-duration: 0.8s
+  transition-duration: 0.8s
+.dialog.dialog--open .dialog__content
+  opacity: 1
+.dialog__overlay
+  -webkit-transition-duration: 0.8s
+  transition-duration: 0.8s
+.dialog
+  &.dialog--open .dialog__content, &.dialog--close .dialog__content
+    -webkit-animation-duration: 0.3s
+    animation-duration: 0.3s
+    -webkit-animation-fill-mode: forwards
+    animation-fill-mode: forwards
+  &.dialog--open .dialog__content
+    -webkit-animation-name: anim-open
+    animation-name: anim-open
+  &.dialog--close .dialog__content
+    -webkit-animation-name: anim-close
+    animation-name: anim-close
+  &.dialog--open
+    h2, button, form, .content
+      -webkit-animation: anim-elem 0.3s both
+      animation: anim-elem 0.3s both
+    h2
+      -webkit-animation-delay: 0.05s
+      animation-delay: 0.05s
+    .content
+      -webkit-animation-delay: 0.075s
+      animation-delay: 0.075s
+    button
+      -webkit-animation-delay: 0.1s
+      animation-delay: 0.1s
+@-webkit-keyframes anim-open
+  0%
+    opacity: 0
+    -webkit-transform: translate3d(0, 50px, 0)
+  100%
+    opacity: 1
+    -webkit-transform: translate3d(0, 0, 0)
+@keyframes anim-open
+  0%
+    opacity: 0
+    -webkit-transform: translate3d(0, 50px, 0)
+    transform: translate3d(0, 50px, 0)
+
+  100%
+    opacity: 1
+    -webkit-transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0)
+@-webkit-keyframes anim-close
+  0%
+    opacity: 1
+    -webkit-transform: translate3d(0, 0, 0)
+  100%
+    opacity: 0
+    -webkit-transform: translate3d(0, 50px, 0)
+@keyframes anim-close
+  0%
+    opacity: 1
+    -webkit-transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0)
+  100%
+    opacity: 0
+    -webkit-transform: translate3d(0, 50px, 0)
+    transform: translate3d(0, 50px, 0)
+@-webkit-keyframes anim-elem
+  0%
+    opacity: 0
+    -webkit-transform: translate3d(0, 25px, 0)
+  100%
+    opacity: 1
+    -webkit-transform: translate3d(0, 0, 0)
+@keyframes anim-elem
+  0%
+    opacity: 0
+    -webkit-transform: translate3d(0, 25px, 0)
+    transform: translate3d(0, 25px, 0)
+  100%
+    opacity: 1
+    -webkit-transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0)
+/* form
+form
+  margin-bottom: 0
+  label
+    color: rgba(33, 33, 33, 0.7)
+  [type="button"], [type="submit"]
+    float: right
+  .form-control, .custom-file-control
+    padding: 5px
+    border-radius: 3px 3px 0 0
+  textarea.form-control, textarea.custom-file-control
+    height: 95px
+  #contact_reset
+    display: none !important
+  .form-control, .custom-file-control,
+  .form-control:focus, .custom-file-control:focus
+    box-shadow: none
+    border: none
+    color: $primary-color
+  .form-control:focus, .custom-file-control:focus
+   background-color: $contrast-third-color
+  .form-control,
+  .custom-file-control,
+  .is-focused .form-control,
+  .is-focused .custom-file-control
+    &.color1
+      background-image: linear-gradient(to top, $color1 2px, rgba(0, 123, 255, 0) 2px), linear-gradient(to top, #ced4da 1px, rgba(206, 212, 218, 0) 1px)
+    &.color2
+     background-image: linear-gradient(to top, $color2 2px, rgba(0, 123, 255, 0) 2px), linear-gradient(to top, #ced4da 1px, rgba(206, 212, 218, 0) 1px)
+    &.color3
+      background-image: linear-gradient(to top, $color3 2px, rgba(0, 123, 255, 0) 2px), linear-gradient(to top, #ced4da 1px, rgba(206, 212, 218, 0) 1px)
+    &.color4
+      background-image: linear-gradient(to top, $color4 2px, rgba(0, 123, 255, 0) 2px), linear-gradient(to top, #ced4da 1px, rgba(206, 212, 218, 0) 1px)
+    &.color5
+      background-image: linear-gradient(to top, $color5 2px, rgba(0, 123, 255, 0) 2px), linear-gradient(to top, #ced4da 1px, rgba(206, 212, 218, 0) 1px)
+    &.color6
+      background-image: linear-gradient(to top, $color6 2px, rgba(0, 123, 255, 0) 2px), linear-gradient(to top, #ced4da 1px, rgba(206, 212, 218, 0) 1px)
+    &.color7
+      background-image: linear-gradient(to top, $color7 2px, rgba(0, 123, 255, 0) 2px), linear-gradient(to top, #ced4da 1px, rgba(206, 212, 218, 0) 1px)
+    &.color8
+      background-image: linear-gradient(to top, $color8 2px, rgba(0, 123, 255, 0) 2px), linear-gradient(to top, #ced4da 1px, rgba(206, 212, 218, 0) 1px)
+.response
+  display: none
+  font-size: 18px
+  margin: 27px
+  top: 18px
+  position: relative
+  clear: both
+  &.success
+    color: $success
+  &.error
+    margin: 0
+    color: $error
+/* documents
+#document
+  a
+    display: block
+    width: 100%
+    margin: 0 0 10px
+    text-transform: uppercase
+    color: $link
+    text-decoration: underline
+/* mobile
+@media screen and (max-width: 860px)
+  #top-banner
+    .container-icons
+      width: 60%
+  .dialog__content
+    width: 80%
+    padding: 30px
+    overflow: auto
+    max-height: 80%
+@media screen and (max-width: 565px)
+  .dialog
+    h2
+      padding: 0 0 1.4em
+  button,
+  .dialog__content button
+    float: none
+    text-align: center
+    display: block
+    width: 100%
+    margin: 2rem auto
+    margin-bottom: 0
+  .hide-desktop
+    display: block
+  .hide-desktop-inline
+    display: inline-block
+  .hide-mobile
+    display: none
+  .hide-mobile-inline
+    display: none
+  body
+    font-size: 0.95rem
+  #top-banner
+    .container-font
+      font-size: 1.65em
+    .container-icons
+      position: fixed
+      top: 87%
+      width: 100%
+  #banner
+    width: 100% !important
+  .dialog__content
+    .content > ul
+      padding: 0
+  .wrapper
+    #profile
+      width: 155px
+      height: 155px
+  form.icon-lang a
+    #contact_send
+      margin-top: 2.5rem
+  #contact
+    #close
+      display: none !important
+    .response
+      margin: 10px
+@media screen and (max-width: 340px)
+  .wrapper
+    top: 10%
