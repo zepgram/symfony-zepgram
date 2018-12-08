@@ -14,19 +14,12 @@ RewriteRule ^(.*)$ /public/$1 [L]
 
  # cache-control
 <ifmodule mod_headers.c>
-     <filesmatch "\\.(ico|jpe?g|png|gif|swf|gz|ttf|woff2)$">
+     <filesmatch "(gif|ico|jpe?g|jpe|jpg|svg|png|css|js)$">
      Header set Cache-Control "max-age=2592000, public"
-     </filesmatch>
-     <filesmatch "\\.(css)$">
-     Header set Cache-Control "max-age=2592000, public"
-     </filesmatch>
-     <filesmatch "\\.(js)$">
-     Header set Cache-Control "max-age=2592000, private"
      </filesmatch>
     <filesmatch "\\.(html|htm)$">
     Header set Cache-Control "max-age=7200, public"
     </filesmatch>
-     # Disable caching for scripts and other dynamic files
     <filesmatch "\.(pl|php|cgi|spl|scgi|fcgi)$">
     Header unset Cache-Control
     </filesmatch>
