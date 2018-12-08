@@ -12,40 +12,44 @@ RewriteBase /
 RewriteCond %{REQUEST_URI} !^/public/
 RewriteRule ^(.*)$ /public/$1 [L]
 
-# cache-control
-<IfModule mod_headers.c>
-    <FilesMatch "\\.(ico|jpe?g|png|gif|swf)$">
-    Header set Cache-Control "max-age=2592000, public"
-    </FilesMatch>
-    <FilesMatch "\\.(css)$">
-    Header set Cache-Control "max-age=604800, public"
-    </FilesMatch>
-    <FilesMatch "\\.(js)$">
-    Header set Cache-Control "max-age=216000, private"
-    </FilesMatch>
-    <FilesMatch "\\.(x?html?|php)$">
-    Header set Cache-Control "max-age=600, private, must-revalidate"
-    </FilesMatch>
-</IfModule>
+ # cache-control
+<ifmodule mod_headers.c>
+     <filesmatch "\\.(ico|jpe?g|png|gif|swf|gz|ttf|woff2)$">
+     Header set Cache-Control "max-age=2592000, public"
+     </filesmatch>
+     <filesmatch "\\.(css)$">
+     Header set Cache-Control "max-age=2592000, public"
+     </filesmatch>
+     <filesmatch "\\.(js)$">
+     Header set Cache-Control "max-age=2592000, private"
+     </filesmatch>
+    <filesmatch "\\.(html|htm)$">
+    Header set Cache-Control "max-age=7200, public"
+    </filesmatch>
+     # Disable caching for scripts and other dynamic files
+    <filesmatch "\.(pl|php|cgi|spl|scgi|fcgi)$">
+    Header unset Cache-Control
+    </filesmatch>
+</ifmodule>
+ # END Cache-Control Headers
 
 ## expire headers
 <IfModule mod_expires.c>
 	ExpiresActive On
 	ExpiresDefault "access plus 7200 seconds"
-	ExpiresByType image/jpg 			"access plus 1 week"
-	ExpiresByType image/jpeg 			"access plus 1 week"
-	ExpiresByType image/png 			"access plus 1 week"
-	ExpiresByType image/gif 			"access plus 1 week"
-	ExpiresByType image/svg+xml			"access plus 1 week"
+	ExpiresByType image/jpg 			"access plus 1 month"
+	ExpiresByType image/jpeg 			"access plus 1 month"
+	ExpiresByType image/png 			"access plus 1 month"
+	ExpiresByType image/gif 			"access plus 1 month"
+	ExpiresByType image/svg+xml			"access plus 1 month"
 	AddType image/x-icon .ico
-	ExpiresByType image/ico 			"access plus 1 week"
-	ExpiresByType image/icon 			"access plus 1 week"
-	ExpiresByType image/x-icon 			"access plus 1 week"
-	ExpiresByType text/css 				"access plus 1 week"
-	ExpiresByType text/javascript 		"access plus 1 week"
+	ExpiresByType image/ico 			"access plus 1 month"
+	ExpiresByType image/icon 			"access plus 1 month"
+	ExpiresByType image/x-icon 			"access plus 1 month"
+	ExpiresByType text/css 				"access plus 1 month"
+	ExpiresByType text/javascript 		"access plus 1 month"
 	ExpiresByType text/html 			"access plus 7200 seconds"
 	ExpiresByType application/xhtml+xml 	"access plus 7200 seconds"
-	ExpiresByType application/javascript 	"access plus 1 week"
-	ExpiresByType application/x-javascript 	"access plus 1 week"
-	ExpiresByType application/x-shockwave-flash "access plus 1 week"
+	ExpiresByType application/javascript 	"access plus 1 month"
+	ExpiresByType application/x-javascript 	"access plus 1 month"
 </IfModule>
