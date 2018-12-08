@@ -1,3 +1,6 @@
 easy_admin:
     entities:
         - App\Entity\Contact
+    design:
+        assets:
+            favicon: '/assets/backend/favicon.png'
