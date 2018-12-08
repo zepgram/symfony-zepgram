@@ -25,6 +25,7 @@ yarn-error.log
 
 /.env.test
 /.idea
-/public
+/public/build/
+/public/bundles/
 /symfony.lock
 /yarn.lock
