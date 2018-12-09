@@ -4,3 +4,4 @@ easy_admin:
     design:
         assets:
             favicon: '/assets/backend/favicon.png'
+    site_name: 'Zepgram'
