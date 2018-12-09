@@ -2,7 +2,6 @@
 ###> symfony/framework-bundle ###
 /.env.local
 /.env.*.local
-/public/bundles/
 /var/
 /vendor/
 ###< symfony/framework-bundle ###
@@ -24,6 +23,3 @@ yarn-error.log
 
 /.env.test
 /.idea
-/public/build/
-/symfony.lock
-/yarn.lock
