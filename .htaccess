@@ -5,6 +5,7 @@ SetEnv MAGIC_QUOTES 0
 SetEnv SESSION_AUTOSTART 0
 SetEnv ZEND_OPTIMIZER 1
 SetEnv PHP_VER 7_2
+SetEnvIf Authorization .+ HTTP_AUTHORIZATION=$0
 
 # rewrite engine
 RewriteEngine on
@@ -12,7 +13,7 @@ RewriteBase /
 RewriteCond %{REQUEST_URI} !^/public/
 RewriteRule ^(.*)$ /public/$1 [L]
 
- # cache-control
+# cache-control
 <ifmodule mod_headers.c>
      <filesmatch "(gif|ico|jpe?g|jpe|jpg|svg|png|css|js|woff|woff2)$">
      Header set Cache-Control "max-age=31536000, public"
