@@ -3,8 +3,8 @@
 {% block stylesheets %}
     <link href="{{ asset('build/static/app.css') }}" rel="stylesheet">
 {% endblock %}
-
 {% block title %}{{ 'meta.title'|trans }} | {{ 'profile.name'|trans }}{% endblock %}
+{% block metadata %}{{ 'meta.description'|trans }}{% endblock metadata %}
 
 {% block body %}
     <video autoplay muted loop id="video" class="container-video">
