@@ -2,8 +2,9 @@
 <html lang="{{ app.request.getLocale() }}">
     <head>
         <meta charset="UTF-8">
-        <link rel="icon" type="image/png" href="{{ asset('build/static/media/images/favicon.png') }}" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="{% block metadata %}{% endblock metadata %}" />
+        <link rel="icon" type="image/png" href="{{ asset('build/static/media/images/favicon.png') }}" />
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
     </head>
