@@ -1,3 +1,4 @@
 composer install --no-dev
-php bin/console doctrine:migrations:migrate
+bin/console doctrine:migrations:migrate
+bin/console cache:clear --env=prod
 yarn encore production
