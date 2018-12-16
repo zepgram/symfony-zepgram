@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://benjamin-calef.ivc-digital.com/sitemap.xml
